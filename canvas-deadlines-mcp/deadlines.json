@@ -1,0 +1,11 @@
+{
+  "note": "Made-up sample deadlines for testing the MCP server. Edit freely. Each assignment needs course, title and due (YYYY-MM-DDTHH:MM, local time). Optional: group (true or false) and url (the assignment's Canvas page).",
+  "assignments": [
+    {"course": "76-101 Interpretation and Argument", "title": "Peer review", "due": "2026-11-05T23:59", "group": false},
+    {"course": "76-101 Interpretation and Argument", "title": "Essay draft 3", "due": "2026-11-09T23:59", "group": false},
+    {"course": "21-120 Calculus", "title": "Problem Set 10", "due": "2026-11-11T09:00", "group": false},
+    {"course": "15-114", "title": "HW 9 reflection", "due": "2026-11-12T23:59"},
+    {"course": "21-120 Calculus", "title": "Exam 2", "due": "2026-11-17T10:00", "group": false},
+    {"course": "15-114", "title": "Final project proposal", "due": "2026-11-20T17:00", "group": true}
+  ]
+}
