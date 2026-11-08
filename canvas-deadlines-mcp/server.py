@@ -112,7 +112,8 @@ def format_assignment(due: datetime, item: dict) -> str:
     """Turn one assignment into a single line of text for the agent."""
     line = (
         f"{item.get('course', 'Unknown course')}: {item.get('title', 'Untitled')}, "
-        f"due {due:%a %b %-d at %-I:%M %p}"
+        # Day and hour are built by hand because "%-d" and "%-I" don't work on Windows.
+        f"due {due:%a %b} {due.day} at {due.hour % 12 or 12}:{due:%M %p}"
     )
     # Only say group or individual when the assignment specifies it.
     if item.get("group") is True:
