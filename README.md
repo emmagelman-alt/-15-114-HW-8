@@ -25,21 +25,15 @@ AI USAGE:
 
 ---
 
-## Installing the Canvas deadlines MCP server
-
-> **Written by Claude:** The instructions in this section were written by Claude (Anthropic's AI assistant, through Claude Code), not by me. Claude helped me build and test this server.
-
-`canvas-deadlines-mcp` gives an MCP client, such as Claude Code, one tool called `get_deadlines`. When you ask what's due, it looks up your upcoming Canvas assignments and returns each one's due date, whether it's group or individual work, and a link to its Canvas page. It asks Canvas fresh every time, so new assignments show up right away.
-
 ### What you need
 
 - git
-- An MCP client. These steps use Claude Code, and the end of this section covers other clients.
-- A Canvas account that lets you make an access token. In Canvas, look for **+ New Access Token** under Account → Settings. Some schools turn this off for students. Without a token, the tool only shows made-up sample deadlines.
+- An agent of your chocie to act as the MCP client.
+- A Canvas account that lets you make an access token. In Canvas, look for **+ New Access Token** you can find this by navigating to your profile, settings, and then access tokens, 
 
-### Steps (Mac or Linux)
+### Steps (Mac)
 
-**1. Install uv.** It installs Python and the server's packages for you.
+**1. download astral's uv installer and run it. 
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -57,7 +51,7 @@ git clone https://github.com/emmagelman-alt/-15-114-HW-8.git hw8
 cd hw8/canvas-deadlines-mcp
 ```
 
-**3. Install the server's packages.** This also downloads Python 3.12 if you don't have it.
+**3. Install the server's packages.** This also downloads Python 3.12 if you don't have it. ( my laptop had python 3.9)
 
 ```bash
 uv sync
