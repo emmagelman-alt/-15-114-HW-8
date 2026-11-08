@@ -7,6 +7,10 @@ description: Use when clarifying or planning a new product, feature, or script. 
 
 Clarify the intended outcome and constraints for a new project before implementation or planning. Do not treat an arbitrary “96% understanding” threshold as measurable; stop when the important decisions are clear enough to proceed.
 
+## Understanding questions take priority
+
+If the user's prompt says they do not understand, are confused, or want something explained or worked through (for example, “I don't understand,” “can you help me understand this,” “I'm confused,” “explain,” or similar phrasing), address that first in a natural, conversational response. This applies even when the same prompt later asks to plan or build something: explain the missing information without starting this skill's interview, plan, or implementation, then wait for the user to confirm they understand and ask to continue in planning or build mode. On that follow-up, resume this skill using the context the user already provided. If they only asked for an explanation and did not ask to plan or build, answer normally without starting the due-diligence workflow.
+
 ## When to use
 
 - The user is starting a new product, feature, app, or script.
