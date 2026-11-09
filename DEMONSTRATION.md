@@ -1,13 +1,13 @@
 To test if my skill due-diligence would work, I gave codex and claude code the same prompt for an app idea I am debating building for capstone. 
-my criteria for determining if my skill was succesful: 1. did the agent invoke the skill without me explicitly asking for it in the prompt. 2. did it follow the question and antcicipated install requirement structure. 3. there was less than 15% difference between the 2 agent's outcomes. 
+my criteria for determining if my skill was succesful: 1. did the agent invoke the skill without me explicitly asking for it in the prompt. 2. did it follow the question and anticipated install requirement structure. 3. there was less than 15% difference between the 2 agent's outcomes. 
 
-the prompt: Help me plan and build an app where I can upload photos of the barcodes or membership ids or scna tags of different membership cards I have for things i am a part of and save them to a app wallet for me to pull up to scan into places instead of needing to bring all the physical cards or pull up all the different website portals.
+the prompt: Help me plan and build an app where I can upload photos of the barcodes or membership ids or scan tags of different membership cards I have for things i am a part of and save them to a app wallet for me to pull up to scan into places instead of needing to bring all the physical cards or pull up all the different website portals.
 
 Codex results (trimmed convo log): 
 
 ## 1. Initial prompt
 
-> Help me plan and build an app where I can upload photos of the barcodes or membership ids or scna tags of different membership cards I have for things i am a part of and save them to a app wallet for me to pull up to scan into places instead of needing to bring all the physical cards or pull up all the different website portals.
+> Help me plan and build an app where I can upload photos of the barcodes or membership ids or scan tags of different membership cards I have for things i am a part of and save them to a app wallet for me to pull up to scan into places instead of needing to bring all the physical cards or pull up all the different website portals.
 
 ## 2. Discovery questions and answers
 
@@ -21,7 +21,7 @@ Codex results (trimmed convo log):
 
 **User:**
 
-> iphone and androi d
+> iphone and android d
 
 **Decision:** Plan for an installable app that can ultimately support both iPhone and Android.
 
@@ -61,7 +61,7 @@ The proposed installation included Expo SDK 58, React Native, TypeScript, camera
 
 **User:**
 
-> yes, and for now, only build demo for iphone
+> yes, and for now, only build demo for iPhone
 
 **Decision:** Build a separate iPhone demo first. Defer the Android demo and active cloud backend connection.
 
@@ -69,7 +69,7 @@ The proposed installation included Expo SDK 58, React Native, TypeScript, camera
 
 **Assistant:**
 
-> To finish required linting and visual Simulator QA, I need permission to:
+> To finish required listing and visual Simulator QA, I need permission to:
 >
 > - Install `eslint` and `eslint-config-expo` locally in the project.
 > - Download Expo Go into the already-running iPhone Simulator.
@@ -170,7 +170,7 @@ After the user requested an iPhone-only demo, the initial implementation scope b
 
 Later, the user added:
 
-> i had claude make a version of this so save that as a copy and make a new oje so both versions exiset
+> i had claude make a version of this so save that as a copy and make a new one so both versions exist
 
 The versions were kept separate:
 
@@ -232,7 +232,7 @@ Verification completed:
 
 1. My initial prompt
 
-Help me plan and build an app where I can upload photos of the barcodes or membership ids or scna tags of different membership cards I have for things i am a part of and save them to a app wallet for me to pull up to scan into places instead of needing to bring all the physical cards or pull up all the different website portals.
+Help me plan and build an app where I can upload photos of the barcodes or membership ids or scan tags of different membership cards I have for things i am a part of and save them to a app wallet for me to pull up to scan into places instead of needing to bring all the physical cards or pull up all the different website portals.
 
 2. Questions Claude asked
 
