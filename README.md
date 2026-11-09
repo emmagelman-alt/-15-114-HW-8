@@ -57,7 +57,7 @@ cd hw8/canvas-deadlines-mcp
 uv sync
 ```
 
-**4. Check that the server starts.** If it's working, it sits there silently, waiting. Press Ctrl+C to stop it.
+**4. Check that the server starts.** If it is working the command wont finish and you wont get your prompt back. Press Ctrl+C to stop it.
 
 ```bash
 uv run server.py
@@ -69,10 +69,10 @@ uv run server.py
 claude mcp add --scope user canvas-deadlines -- "$(which uv)" --directory "$PWD" run server.py
 ```
 
-The server uses CMU's Canvas (`https://canvas.cmu.edu`) unless you tell it otherwise. If your school's Canvas has a different address, add it right after the server name:
+The server uses CMU's Canvas (`https://canvas.cmu.edu`) unless you tell it otherwise.
 
 ```bash
-claude mcp add --scope user canvas-deadlines -e CANVAS_URL=https://canvas.yourschool.edu -- "$(which uv)" --directory "$PWD" run server.py
+claude mcp add --scope user canvas-deadlines -e CANVAS_URL=https://canvas.cmu.edu -- "$(which uv)" --directory "$PWD" run server.py
 ```
 
 **6. Make and save your Canvas token.**
@@ -85,8 +85,6 @@ claude mcp add --scope user canvas-deadlines -e CANVAS_URL=https://canvas.yoursc
 ```bash
 (umask 077; mkdir -p ~/.config/canvas-deadlines && pbpaste > ~/.config/canvas-deadlines/token)
 ```
-
-Never put the token inside the repo folder, and don't share it. Anyone with your token can act as you in Canvas. You can delete it at any time under Account → Settings → Approved Integrations.
 
 **7. Test it.** Start a new Claude Code session and ask "What do I have due this week?"
 
@@ -102,8 +100,6 @@ These steps haven't been tested on Windows. They should work with these changes:
 - Save the token as the only text in `%USERPROFILE%\.config\canvas-deadlines\token`.
 
 ### Other clients
-
-Every MCP client needs the same three things: a name, the full path to `uv` as the command, and the arguments. `which uv` prints the uv path, and `pwd`, run inside `canvas-deadlines-mcp`, prints the folder path.
 
 For Codex, add this to `~/.codex/config.toml`:
 
@@ -121,12 +117,3 @@ Cursor (`~/.cursor/mcp.json`), Claude Code (`~/.claude.json`) and the Claude des
   "args": ["--directory", "/full/path/to/hw8/canvas-deadlines-mcp", "run", "server.py"]
 }
 ```
-
-To use a Canvas other than CMU's, add `"env": {"CANVAS_URL": "https://canvas.yourschool.edu"}` to the JSON entry. In Codex, use `env = { CANVAS_URL = "https://canvas.yourschool.edu" }`.
-
-### Troubleshooting
-
-- **"Source: the sample file…"** means the server couldn't find the token file, or the file is empty.
-- **"Canvas rejected the saved access token"** means the token is wrong or has expired. Make a new one.
-- **The tool doesn't appear** in the session. Check that every path in the config is a full path, not a shortened one. In Claude Code, `claude mcp get canvas-deadlines` shows whether the server connects.
-- **An assignment is missing.** The tool only includes assignments with a due date inside the time window you asked about. Try asking "What's due this month?"
